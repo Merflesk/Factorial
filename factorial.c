@@ -6,34 +6,30 @@
 
 #include <stdio.h>
 
-int factorial(int n)
+long factorial(int n)
 {
-    n = n * (n-1);
-    
-    factorial(n-1);
-
-    if (n == 0)
+    int i;
+    long result;
+    printf("Starting value of result is: %llu", result);
+    for (i = 1; i <= n; i++)
     {
-        n = 1;
-        return;
+        result *= i;
+        printf("Step %d -- i is: %d and result is now: %llu", i, i, result);
     }
-    return n;
+    return result;
 }
 
 
 
-int main(int argc, int number)
+int main()
 {
-    /* code */
-    if (argc != 0)
-    {
-        int fact = factorial(number)
-        printf("The factorial of %d is %d", number, fact);
-    } else
-    {
-        printf("You must supply an argument. Exiting.")
-        return -1;
-    }
-    
+    /* Ask user for a number and store it somewhere */
+    int number;
+    printf("Please enter a number: \n");
+    scanf("%d", &number);
+    // TODO
+    // Print the results to the user:
+    //long result = factorial(number);
+    printf("The factorial of %d is %llu", number, factorial(number));
     return 0;
 }
