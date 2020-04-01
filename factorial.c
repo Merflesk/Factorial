@@ -10,11 +10,11 @@ long factorial(int n)
 {
     int i;
     long result;
-    printf("Starting value of result is: %llu", result);
+    printf("Starting value of result is: %llu \n \n", result);
     for (i = 1; i <= n; i++)
     {
         result *= i;
-        printf("Step %d -- i is: %d and result is now: %llu", i, i, result);
+        printf("Step %d -- i is: %d and result is now: %llu \n", i, i, result);
     }
     return result;
 }
@@ -30,6 +30,6 @@ int main()
     // TODO
     // Print the results to the user:
     //long result = factorial(number);
-    printf("The factorial of %d is %llu", number, factorial(number));
+    printf("The factorial of %d is %llu \n", number, factorial(number));
     return 0;
 }
