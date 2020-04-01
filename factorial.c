@@ -9,7 +9,7 @@
 long factorial(int n)
 {
     int i;
-    long result;
+    long result = 1; // Must be instantiated, if not variable value will be 140026038755616
     printf("Starting value of result is: %llu \n \n", result);
     for (i = 1; i <= n; i++)
     {
@@ -27,7 +27,7 @@ int main()
     int number;
     printf("Please enter a number: \n");
     scanf("%d", &number);
-    // TODO
+   
     // Print the results to the user:
     //long result = factorial(number);
     printf("The factorial of %d is %llu \n", number, factorial(number));
